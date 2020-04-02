@@ -44,7 +44,7 @@ namespace RectangleBinPack
 			return occupancy;
 		}
 
-		Rect^ Insert(const int width, const int height, const bool merge, const LevelChoiceHeuristic choiceHeuristic)
+		Rect Insert(const int width, const int height, const bool merge, const LevelChoiceHeuristic choiceHeuristic)
 		{
 			ThrowIfDisposed();
 
@@ -54,7 +54,7 @@ namespace RectangleBinPack
 				static_cast<rbp::SkylineBinPack::LevelChoiceHeuristic>(choiceHeuristic)
 			);
 
-			return gcnew Rect(rect.x, rect.y, rect.width, rect.height);
+			return Rect(rect.x, rect.y, rect.width, rect.height);
 		}
 	};
 }

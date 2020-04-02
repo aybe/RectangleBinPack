@@ -48,7 +48,7 @@ namespace RectangleBinPack
 			return	occupancy;
 		}
 
-		Rect^ Insert(const int width, const int height, const FreeRectChoiceHeuristic heuristic)
+		Rect Insert(const int width, const int height, const FreeRectChoiceHeuristic heuristic)
 		{
 			ThrowIfDisposed();
 
@@ -58,7 +58,7 @@ namespace RectangleBinPack
 				static_cast<rbp::MaxRectsBinPack::FreeRectChoiceHeuristic>(heuristic)
 			);
 
-			return gcnew Rect(rect.x, rect.y, rect.width, rect.height);
+			return Rect(rect.x, rect.y, rect.width, rect.height);
 		}
 	};
 }

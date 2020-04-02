@@ -49,7 +49,7 @@ namespace RectangleBinPack
 			return occupancy;
 		}
 
-		Rect^ Insert(const int width, const int height, const bool merge, const ShelfChoiceHeuristic choiceHeuristic)
+		Rect Insert(const int width, const int height, const bool merge, const ShelfChoiceHeuristic choiceHeuristic)
 		{
 			ThrowIfDisposed();
 
@@ -59,7 +59,7 @@ namespace RectangleBinPack
 				static_cast<rbp::ShelfBinPack::ShelfChoiceHeuristic>(choiceHeuristic)
 			);
 
-			return gcnew Rect(rect.x, rect.y, rect.width, rect.height);
+			return Rect(rect.x, rect.y, rect.width, rect.height);
 		}
 	};
 }

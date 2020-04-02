@@ -63,7 +63,7 @@ namespace RectangleBinPack
 			return occupancy;
 		}
 
-		Rect^ Insert(const int width, const int height, const bool merge,
+		Rect Insert(const int width, const int height, const bool merge,
 		             const FreeRectChoiceHeuristic choiceHeuristic, const GuillotineSplitHeuristic splitHeuristic)
 		{
 			ThrowIfDisposed();
@@ -76,7 +76,7 @@ namespace RectangleBinPack
 				static_cast<rbp::GuillotineBinPack::GuillotineSplitHeuristic>(splitHeuristic)
 			);
 
-			return gcnew Rect(rect.x, rect.y, rect.width, rect.height);
+			return Rect(rect.x, rect.y, rect.width, rect.height);
 		}
 	};
 }
