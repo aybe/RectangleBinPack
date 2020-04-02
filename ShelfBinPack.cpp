@@ -13,6 +13,8 @@
 
 #include "ShelfBinPack.h"
 
+#include <algorithm>
+
 namespace rbp {
 
 using namespace std;
