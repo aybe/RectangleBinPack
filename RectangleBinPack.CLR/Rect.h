@@ -1,11 +1,26 @@
 #pragma once
 
+#define nameof(x) (#x)
+
+using namespace System;
+using namespace Diagnostics;
+
 namespace RectangleBinPack
 {
 	public value struct Rect final
 	{
 	private:
-		initonly int _x, _y, _width, _height;
+		[DebuggerBrowsableAttribute(DebuggerBrowsableState::Never)]
+		initonly int _x;
+
+		[DebuggerBrowsableAttribute(DebuggerBrowsableState::Never)]
+		initonly int _y;
+
+		[DebuggerBrowsableAttribute(DebuggerBrowsableState::Never)]
+		initonly int _width;
+
+		[DebuggerBrowsableAttribute(DebuggerBrowsableState::Never)]
+		initonly int _height;
 
 	public:
 		Rect(const int x, const int y, const int width, const int height)
@@ -31,6 +46,12 @@ namespace RectangleBinPack
 		property int Height
 		{
 			int get() { return _height; }
+		}
+
+		String^ ToString() override
+		{
+			return String::Format("{0}: {1}, {2}: {3}, {4}: {5}, {6}: {7}",
+			                      nameof(X), X, nameof(Y), Y, nameof(Width), Width, nameof(Height), Height);
 		}
 	};
 }
