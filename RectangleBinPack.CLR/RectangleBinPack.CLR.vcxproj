@@ -128,18 +128,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Disposable.h" />
-    <ClInclude Include="GuillotineBinPack.h" />
+    <ClInclude Include="Guillotine.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Rect.h" />
-    <ClInclude Include="MaxRectsBinPack.h" />
+    <ClInclude Include="MaxRects.h" />
     <ClInclude Include="Resource.h" />
-    <ClInclude Include="ShelfBinPack.h" />
-    <ClInclude Include="SkylineBinPack.h" />
+    <ClInclude Include="Shelf.h" />
+    <ClInclude Include="Skyline.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="Disposable.cpp" />
-    <ClCompile Include="GuillotineBinPack.cpp" />
+    <ClCompile Include="Guillotine.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -147,9 +147,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Rect.cpp" />
-    <ClCompile Include="MaxRectsBinPack.cpp" />
-    <ClCompile Include="ShelfBinPack.cpp" />
-    <ClCompile Include="SkylineBinPack.cpp" />
+    <ClCompile Include="MaxRects.cpp" />
+    <ClCompile Include="Shelf.cpp" />
+    <ClCompile Include="Skyline.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />

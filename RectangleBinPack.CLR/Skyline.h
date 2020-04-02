@@ -9,7 +9,7 @@ using namespace System;
 
 namespace RectangleBinPack
 {
-	public ref class SkylineBinPack sealed : public Disposable
+	public ref class Skyline sealed : public Disposable
 	{
 		rbp::SkylineBinPack* _instance;
 
@@ -30,7 +30,7 @@ namespace RectangleBinPack
 			LevelMinWasteFit
 		};
 
-		explicit SkylineBinPack(const int width, const int height, const bool useWasteMap)
+		explicit Skyline(const int width, const int height, const bool useWasteMap)
 			: _instance(new rbp::SkylineBinPack(width, height, useWasteMap))
 		{
 		}

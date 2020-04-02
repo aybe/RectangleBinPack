@@ -27,16 +27,16 @@
     <ClInclude Include="Disposable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MaxRectsBinPack.h">
+    <ClInclude Include="Guillotine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GuillotineBinPack.h">
+    <ClInclude Include="MaxRects.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ShelfBinPack.h">
+    <ClInclude Include="Shelf.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SkylineBinPack.h">
+    <ClInclude Include="Skyline.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -53,16 +53,16 @@
     <ClCompile Include="Disposable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MaxRectsBinPack.cpp">
+    <ClCompile Include="Guillotine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GuillotineBinPack.cpp">
+    <ClCompile Include="MaxRects.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ShelfBinPack.cpp">
+    <ClCompile Include="Shelf.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SkylineBinPack.cpp">
+    <ClCompile Include="Skyline.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
