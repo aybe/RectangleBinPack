@@ -1,5 +1,7 @@
 ### This fork adds a CLR wrapper around the library
 
-Check the original [readme](Readme.txt).
+Check out the original [readme](Readme.txt).
 
-Get [pre-built binaries](https://github.com/aybe/RectangleBinPack/releases/latest).
+Pre-built binaries are [here](https://github.com/aybe/RectangleBinPack/releases/latest).
+
+Note: this wrapper won't run under Unity as mono doesn't support C++/CLI.
