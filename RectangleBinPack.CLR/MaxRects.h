@@ -2,6 +2,7 @@
 
 #include <MaxRectsBinPack.h>
 
+#include "MaxRectsHeuristic.h"
 #include "Disposable.h"
 #include "Rect.h"
 
@@ -9,7 +10,7 @@ using namespace System;
 
 namespace RectangleBinPack
 {
-	public ref class MaxRectsBinPack sealed : public Disposable
+	public ref class MaxRects sealed : public Disposable
 	{
 		rbp::MaxRectsBinPack* _instance;
 
@@ -21,20 +22,7 @@ namespace RectangleBinPack
 
 	public:
 
-		/// <summary>
-		/// Specifies the different heuristic rules that can be used when deciding
-		/// where to place a new rectangle.
-		/// </summary>
-		enum class FreeRectChoiceHeuristic
-		{
-			RectBestShortSideFit,
-			RectBestLongSideFit,
-			RectBestAreaFit,
-			RectBottomLeftRule,
-			RectContactPointRule
-		};
-
-		explicit MaxRectsBinPack(const int width, const int height, const bool allowFlip)
+		explicit MaxRects(const int width, const int height, const bool allowFlip)
 			: _instance(new rbp::MaxRectsBinPack(width, height, allowFlip))
 		{
 		}
@@ -48,7 +36,7 @@ namespace RectangleBinPack
 			return	occupancy;
 		}
 
-		Rect^ Insert(const int width, const int height, const FreeRectChoiceHeuristic heuristic)
+		Rect Insert(const int width, const int height, const MaxRectsHeuristic heuristic)
 		{
 			ThrowIfDisposed();
 
@@ -58,7 +46,7 @@ namespace RectangleBinPack
 				static_cast<rbp::MaxRectsBinPack::FreeRectChoiceHeuristic>(heuristic)
 			);
 
-			return gcnew Rect(rect.x, rect.y, rect.width, rect.height);
+			return Rect(rect.x, rect.y, rect.width, rect.height);
 		}
 	};
 }
