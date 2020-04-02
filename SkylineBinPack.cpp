@@ -15,6 +15,8 @@
 
 #include "SkylineBinPack.h"
 
+#include <algorithm>
+
 namespace rbp {
 
 using namespace std;

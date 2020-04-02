@@ -17,6 +17,8 @@
 
 #include "ShelfNextFitBinPack.h"
 
+#include <algorithm>
+
 namespace rbp {
 
 using namespace std;

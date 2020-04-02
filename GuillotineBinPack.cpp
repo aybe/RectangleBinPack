@@ -15,6 +15,8 @@
 
 #include "GuillotineBinPack.h"
 
+#include <algorithm>
+
 namespace rbp {
 
 using namespace std;
