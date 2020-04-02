@@ -45,7 +45,7 @@ namespace RectangleBinPack
 			ThrowIfDisposed();
 
 			const auto occupancy = _instance->Occupancy();
-			
+
 			return occupancy;
 		}
 

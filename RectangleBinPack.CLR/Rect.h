@@ -4,7 +4,6 @@ namespace RectangleBinPack
 {
 	public value struct Rect final
 	{
-		
 	private:
 		initonly int _x, _y, _width, _height;
 

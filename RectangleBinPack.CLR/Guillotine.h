@@ -2,6 +2,8 @@
 
 #include <GuillotineBinPack.h>
 
+#include "GuillotineHeuristic.h"
+#include "GuillotineSplit.h"
 #include "Disposable.h"
 #include "Rect.h"
 
@@ -21,34 +23,6 @@ namespace RectangleBinPack
 
 	public:
 
-		/// <summary>
-		/// Specifies the different choice heuristics that can be used when deciding
-		/// which of the free sub rectangles to place the to-be-packed rectangle into.
-		/// </summary>
-		enum class FreeRectChoiceHeuristic
-		{
-			RectBestAreaFit,
-			RectBestShortSideFit,
-			RectBestLongSideFit,
-			RectWorstAreaFit,
-			RectWorstShortSideFit,
-			RectWorstLongSideFit
-		};
-
-		/// <summary>
-		/// Specifies the different choice heuristics that can be used when the packer needs to decide
-		/// whether to subdivide the remaining free space in horizontal or vertical direction.
-		/// </summary>
-		enum class GuillotineSplitHeuristic
-		{
-			SplitShorterLeftoverAxis,
-			SplitLongerLeftoverAxis,
-			SplitMinimizeArea,
-			SplitMaximizeArea,
-			SplitShorterAxis,
-			SplitLongerAxis
-		};
-
 		explicit Guillotine(const int width, const int height)
 			: _instance(new rbp::GuillotineBinPack(width, height))
 		{
@@ -63,8 +37,7 @@ namespace RectangleBinPack
 			return occupancy;
 		}
 
-		Rect Insert(const int width, const int height, const bool merge,
-		             const FreeRectChoiceHeuristic choiceHeuristic, const GuillotineSplitHeuristic splitHeuristic)
+		Rect Insert(const int width, const int height, const bool merge, const GuillotineHeuristic heuristic, const GuillotineSplit split)
 		{
 			ThrowIfDisposed();
 
@@ -72,8 +45,8 @@ namespace RectangleBinPack
 				width,
 				height,
 				merge,
-				static_cast<rbp::GuillotineBinPack::FreeRectChoiceHeuristic>(choiceHeuristic),
-				static_cast<rbp::GuillotineBinPack::GuillotineSplitHeuristic>(splitHeuristic)
+				static_cast<rbp::GuillotineBinPack::FreeRectChoiceHeuristic>(heuristic),
+				static_cast<rbp::GuillotineBinPack::GuillotineSplitHeuristic>(split)
 			);
 
 			return Rect(rect.x, rect.y, rect.width, rect.height);

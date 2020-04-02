@@ -129,17 +129,25 @@
   <ItemGroup>
     <ClInclude Include="Disposable.h" />
     <ClInclude Include="Guillotine.h" />
+    <ClInclude Include="GuillotineHeuristic.h" />
+    <ClInclude Include="GuillotineSplit.h" />
+    <ClInclude Include="MaxRectsHeuristic.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Rect.h" />
     <ClInclude Include="MaxRects.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Shelf.h" />
+    <ClInclude Include="ShelfHeuristic.h" />
     <ClInclude Include="Skyline.h" />
+    <ClInclude Include="SkylineHeuristic.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="Disposable.cpp" />
     <ClCompile Include="Guillotine.cpp" />
+    <ClCompile Include="GuillotineHeuristic.cpp" />
+    <ClCompile Include="GuillotineSplit.cpp" />
+    <ClCompile Include="MaxRectsHeuristic.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -149,7 +157,9 @@
     <ClCompile Include="Rect.cpp" />
     <ClCompile Include="MaxRects.cpp" />
     <ClCompile Include="Shelf.cpp" />
+    <ClCompile Include="ShelfHeuristic.cpp" />
     <ClCompile Include="Skyline.cpp" />
+    <ClCompile Include="SkylineHeuristic.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />

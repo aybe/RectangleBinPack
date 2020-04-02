@@ -2,6 +2,7 @@
 
 #include <SkylineBinPack.h>
 
+#include "SkylineHeuristic.h"
 #include "Disposable.h"
 #include "Rect.h"
 
@@ -21,15 +22,6 @@ namespace RectangleBinPack
 
 	public:
 
-		/// <summary>
-		/// Defines the different heuristic rules that can be used to decide how to make the rectangle placements.
-		/// </summary>
-		enum class LevelChoiceHeuristic
-		{
-			LevelBottomLeft,
-			LevelMinWasteFit
-		};
-
 		explicit Skyline(const int width, const int height, const bool useWasteMap)
 			: _instance(new rbp::SkylineBinPack(width, height, useWasteMap))
 		{
@@ -40,18 +32,18 @@ namespace RectangleBinPack
 			ThrowIfDisposed();
 
 			const auto occupancy = _instance->Occupancy();
-			
+
 			return occupancy;
 		}
 
-		Rect Insert(const int width, const int height, const bool merge, const LevelChoiceHeuristic choiceHeuristic)
+		Rect Insert(const int width, const int height, const bool merge, const SkylineHeuristic heuristic)
 		{
 			ThrowIfDisposed();
 
 			const auto rect = _instance->Insert(
 				width,
 				height,
-				static_cast<rbp::SkylineBinPack::LevelChoiceHeuristic>(choiceHeuristic)
+				static_cast<rbp::SkylineBinPack::LevelChoiceHeuristic>(heuristic)
 			);
 
 			return Rect(rect.x, rect.y, rect.width, rect.height);

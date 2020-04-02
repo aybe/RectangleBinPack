@@ -59,12 +59,12 @@ namespace RectangleBinPack
 			ThrowIfDisposed();
 
 			const auto occupancy = _instance->Occupancy();
-			
+
 			return occupancy;
 		}
 
 		Rect Insert(const int width, const int height, const bool merge,
-		             const FreeRectChoiceHeuristic choiceHeuristic, const GuillotineSplitHeuristic splitHeuristic)
+		            const FreeRectChoiceHeuristic choiceHeuristic, const GuillotineSplitHeuristic splitHeuristic)
 		{
 			ThrowIfDisposed();
 
